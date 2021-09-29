@@ -1,5 +1,6 @@
 ## Lab #1: 3-Nodes Cluster
 
+
 ## Create and start a cluster with 3 nodes with version 19.1.11
 
 ```
@@ -56,7 +57,9 @@
 ./roachprod destroy seungjin-upgrade 
 ```
 
+
 ## Lab #2: 5-Nodes Cluster
+
 
 ## Create and start a cluster with 5 nodes with version 19.1.11
 
