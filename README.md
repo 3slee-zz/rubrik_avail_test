@@ -23,28 +23,32 @@
 ./roachprod run seungjin-upgrade "kv.snapshot_recovery.max_rate=‘1024mb'”
 ```
 
-## Verify ranges are replicated from DB Console. Stop and upgrade the second node to v19.2.12
+## Stop and upgrade the second node to v19.2.12
 
 ```
+# First verify ranges are adequately replicated from DB Console. 
 ./roachprod stop seungjin-upgrade:2 
 ./roachprod stage seungjin-upgrade:2 release v19.2.12
 ```
 
-## Verify ranges are replicated from DB Console. Temporarily stop the third node to simulate a disaster
+## Temporarily stop the third node to simulate a disaster
 
 ```
+# First verify ranges are adequately replicated from DB Console. 
 ./roachprod stop seungjin-upgrade:3
 ```
 
-## Confirm the cluster is no longer available from the DB Console. Bring back the second node
+## Bring back the second node
 
 ```
+# Confirm the cluster is no longer available from the DB Console. 
 ./roachprod start seungjin-upgrade:2 
 ```
 
-## From the DB Console, ensure the second node has been upgraded. Ensure two of the nodes in the cluster is up and running and the cluster is available. Terminate the cluster in the end
+## Terminate the cluster in the end
 
 ```
+# From the DB Console, ensure the second node has been upgraded. Ensure two of the nodes in the cluster is up and running and the cluster is available. 
 ./roachprod destroy seungjin-upgrade 
 ```
 
@@ -73,33 +77,38 @@
 ./roachprod run seungjin-upgrade "kv.snapshot_recovery.max_rate=‘1024mb'”
 ```
 
-## Verify ranges are replicated from DB Console. Stop and upgrade the second node to v19.2.12
+## Stop and upgrade the second node to v19.2.12
 
 ```
+# Verify ranges are replicated from DB Console. 
 ./roachprod stop seungjin-upgrade:2 
 ./roachprod stage seungjin-upgrade:2 release v19.2.12
 ```
 
-## Verify ranges are replicated from DB Console. Temporarily stop the third node to simulate a disaster
+## Temporarily stop the third node to simulate a disaster
 
 ```
+# Verify ranges are replicated from DB Console. 
 ./roachprod stop seungjin-upgrade:3
 ```
 
-## Confirm the cluster is still available and there aren’t any errors. Bring back the second node
+## Bring back the second node
 
 ```
+# Confirm the cluster is still available and there aren’t any errors. 
 ./roachprod start seungjin-upgrade:2 
 ```
 
-## From the DB Console, ensure the second node has been upgraded. Bring back the third node
+## Bring back the third node
 
 ```
+# From the DB Console, ensure the second node has been upgraded. 
 ./roachprod start seungjin-upgrade:3
 ```
 
-## Ensure all of the nodes in the cluster is up and running. Terminate the cluster in the end
+## Terminate the cluster in the end
 
 ```
+# Ensure all of the nodes in the cluster is up and running. 
 ./roachprod destroy seungjin-upgrade 
 ```
