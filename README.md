@@ -27,6 +27,7 @@
 
 ```
 # First verify ranges are adequately replicated from DB Console. 
+
 ./roachprod stop seungjin-upgrade:2 
 ./roachprod stage seungjin-upgrade:2 release v19.2.12
 ```
@@ -35,6 +36,7 @@
 
 ```
 # First verify ranges are adequately replicated from DB Console. 
+
 ./roachprod stop seungjin-upgrade:3
 ```
 
@@ -42,6 +44,7 @@
 
 ```
 # Confirm the cluster is no longer available from the DB Console. 
+
 ./roachprod start seungjin-upgrade:2 
 ```
 
@@ -49,6 +52,7 @@
 
 ```
 # From the DB Console, ensure the second node has been upgraded. Ensure two of the nodes in the cluster is up and running and the cluster is available. 
+
 ./roachprod destroy seungjin-upgrade 
 ```
 
@@ -81,6 +85,7 @@
 
 ```
 # Verify ranges are replicated from DB Console. 
+
 ./roachprod stop seungjin-upgrade:2 
 ./roachprod stage seungjin-upgrade:2 release v19.2.12
 ```
@@ -89,6 +94,7 @@
 
 ```
 # Verify ranges are replicated from DB Console. 
+
 ./roachprod stop seungjin-upgrade:3
 ```
 
@@ -96,6 +102,7 @@
 
 ```
 # Confirm the cluster is still available and there aren’t any errors. 
+
 ./roachprod start seungjin-upgrade:2 
 ```
 
@@ -103,6 +110,7 @@
 
 ```
 # From the DB Console, ensure the second node has been upgraded. 
+
 ./roachprod start seungjin-upgrade:3
 ```
 
@@ -110,5 +118,6 @@
 
 ```
 # Ensure all of the nodes in the cluster is up and running. 
+
 ./roachprod destroy seungjin-upgrade 
 ```
