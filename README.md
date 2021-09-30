@@ -21,7 +21,7 @@
 ```
 ./roachprod run seungjin-upgrade "./cockroach workload init tpcc”
 ./roachprod run seungjin-upgrade "./cockroach workload run tpcc”
-'''
+```
 
 ## Log in to SQL and increase the recovery and rebalance rate to speed up the recovery
 
