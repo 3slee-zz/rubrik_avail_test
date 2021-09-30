@@ -27,7 +27,7 @@
 
 ```
 ./roachprod sql seungjin-upgrade:1
-set cluster setting kv.snapshot_recovery.max_rate='1024mb'
+set cluster setting kv.snapshot_recovery.max_rate='1024mb';
 set cluster setting kv.snapshot_rebalance.max_rate='1024mb';
 ```
 
