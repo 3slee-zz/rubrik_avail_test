@@ -61,7 +61,8 @@ set cluster setting kv.snapshot_rebalance.max_rate='1024mb';
 ## Terminate the cluster in the end
 
 ```
-# From the DB Console, ensure the second node has been upgraded. Ensure two of the nodes in the cluster is up and running and the cluster is available. 
+# From the DB Console, ensure the second node has been upgraded. 
+# Ensure two of the nodes in the cluster is up and running and the cluster is available. 
 
 ./roachprod destroy seungjin-upgrade 
 ```
