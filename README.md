@@ -21,7 +21,13 @@
 ```
 ./roachprod run seungjin-upgrade "./cockroach workload init tpcc”
 ./roachprod run seungjin-upgrade "./cockroach workload run tpcc”
-./roachprod run seungjin-upgrade "kv.snapshot_recovery.max_rate=‘1024mb'”
+
+## Log in to SQL and increase the recovery and rebalance rate to speed up the recovery
+
+'''
+./roachprod sql seungjin-upgrade:1
+set cluster setting kv.snapshot_recovery.max_rate='1024mb'
+set cluster setting kv.snapshot_rebalance.max_rate='1024mb';
 ```
 
 ## Stop and upgrade the second node to v19.2.12
